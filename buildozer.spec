@@ -1,13 +1,13 @@
 [app]
 
 # (str) Title of your application
-title = MyCalculator
+title = Calculator
 
 # (str) Package name
-package.name = my_calculator
+package.name = calculator_for_all
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.grema
+package.domain = org.kvint
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -16,20 +16,20 @@ source.dir = .
 source.include_exts = py,png,jpg
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = Images/*.png
+source.include_patterns = images/*.png
 
 # (list) Source files to exclude (let empty to not exclude anything)
-source.exclude_exts = LICENSE, READMY.md
+source.exclude_exts = LICENSE,READMY.md
 
 # (list) List of directory to exclude (let empty to not exclude anything)
-source.exclude_dirs =
+source.exclude_dirs = .github,APK files,progress
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.2.1
+version = 0.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -47,7 +47,7 @@ requirements = python3,kivy==2.1.0,kivymd==1.1.1
 presplash.filename = %(source.dir)s/Images/presplash.jpg
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/Images/favicon.png
+icon.filename = %(source.dir)s/Images/iconimage.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -60,7 +60,7 @@ orientation = portrait
 #
 
 #
-author = © Copyright Grema Inc.
+author = © Copyright Kvint Inc.
 
 # change the major version of python used by the app
 osx.python_version = 3
