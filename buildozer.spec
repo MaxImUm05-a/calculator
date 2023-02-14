@@ -26,7 +26,7 @@ source.exclude_dirs = .github,APK files,progress
 
 # (list) List of exclusions using pattern matching
 # Do not prefix with './'
-#source.exclude_patterns = license,images/*/*.jpg
+#source.exclude_patterns =
 
 # (str) Application versioning (method 1)
 version = 0.1
@@ -44,10 +44,10 @@ requirements = python3,kivy==2.1.0,kivymd==1.1.1
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = /іmages/presplash.jpg
+presplash.filename = %(source.dir)s/іmages/presplash.jpg
 
 # (str) Icon of the application
-icon.filename = /іmages/iconimage.png
+icon.filename = %(source.dir)s/іmages/iconimage.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
