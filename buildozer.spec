@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,png,jpg
 
 # (list) List of inclusions using pattern matching
-source.include_patterns = images/*.png
+source.include_patterns = images/*.png, images/*.jpg
 
 # (list) Source files to exclude (let empty to not exclude anything)
 source.exclude_exts = LICENSE,READMY.md
@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.1.0,kivymd==1.1.1
+requirements = python3,kivy==2.2.0.dev0,kivymd==1.1.1
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
