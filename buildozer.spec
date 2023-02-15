@@ -16,10 +16,10 @@ source.dir = .
 source.include_exts = py,png,jpg
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = images/*.png, images/*.jpg
+source.include_patterns = images/*.png, images/*.jpg
 
 # (list) Source files to exclude (let empty to not exclude anything)
-source.exclude_exts = LICENSE,READMY.md
+source.exclude_exts = LICENSE,README.md
 
 # (list) List of directory to exclude (let empty to not exclude anything)
 source.exclude_dirs = .github,APK files,progress
@@ -44,10 +44,10 @@ requirements = python3,kivy==2.1.0,kivymd==1.1.1
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/calculator/іmages/presplash.jpg
+presplash.filename = %(source.dir)s/images/presplash.jpg
 
 # (str) Icon of the application
-icon.filename = %(source.dir)s/calculator/іmages/iconimage.png
+icon.filename = %(source.dir)s/calculator/images/iconimage.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
