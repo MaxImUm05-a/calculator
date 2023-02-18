@@ -44,8 +44,8 @@ class MyButton(MDTextButton):
 
 class TestApp(MDApp):
     def build(self):
-        bl = MDGridLayout(pos_hint = {'centr_x':0.5 , 'center_y':0.5} , cols = 4 , rows = 5 , padding = 50 , spacing = 50)
-        df = MDBoxLayout(orientation = 'vertical' , pos_hint = {'center_x':0.5 , 'center_y':0.7} ,  padding = 250 , spacing = 50)
+        bl = MDGridLayout(pos_hint={'centr_x': 3, 'center_y': 0.9}, cols=4, rows=5, padding=140, spacing=100)
+        df = MDBoxLayout(orientation='vertical', pos_hint={'centr_x': 3, 'center_y': 0.9}, padding=350, spacing=50)
         self.jkl = MDLabel(text = '')
         lab = [MyButton(text=str(x)) for x in range(10)]
         qw = MyButton(text='+')
