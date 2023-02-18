@@ -6,8 +6,8 @@ from kivymd.uix.gridlayout import MDGridLayout
 
 class TestApp (MDApp):
     def build(self):
-        bl = MDGridLayout(pos_hint = {'centr_x':0.5 , 'center_y':0.5} , cols = 4 , rows = 5 , padding = 50 , spacing = 50)
-        df = MDBoxLayout(orientation = 'vertical' , pos_hint = {'centr_x':2 , 'center_y':0.7} ,  padding = 250 , spacing = 50)
+        bl = MDGridLayout(pos_hint={'centr_x': 3, 'center_y': 0.9}, cols=4, rows=5, padding=140, spacing=100)
+        df = MDBoxLayout(orientation='vertical', pos_hint={'centr_x': 3, 'center_y': 0.9}, padding=350, spacing=50)
         jkl = MDLabel(text = 'напиши шось тут,нен напишеш,то скормлю оркам')
         lab = MDTextButton(text = '1')
         lab1 = MDTextButton(text = '2')
