@@ -29,7 +29,7 @@ source.exclude_dirs = .github,APK files,progress
 #source.exclude_patterns =
 
 # (str) Application versioning (method 1)
-version = 0.1
+version = 0.1.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -44,7 +44,7 @@ requirements = python3,kivy==2.1.0,kivymd==1.1.1
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/images/presplash.jpg
+#presplash.filename = %(source.dir)s/images/presplash.jpg
 
 # (str) Icon of the application
 icon.filename = %(source.dir)s/images/iconimage.png
