@@ -1,15 +1,15 @@
 from kivymd.app import MDApp
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDLabel
-from kivymd.uix.button import MDTextButton
 from kivymd.uix.gridlayout import MDGridLayout
+from kivymd.uix.button import MDRectangleFlatButton
 
-class MyButton(MDTextButton):
+class MyButton(MDRectangleFlatButton):
     save = ''
 
     def __init__(self, text, *args, **kwargs):
         self.text = text
-        super().__init__(text = text, *args, **kwargs)
+        super().__init__(text=text, *args, **kwargs)
 
     def on_release(self):
         txt = app.jkl.text
@@ -42,20 +42,29 @@ class MyButton(MDTextButton):
                 app.jkl.text = 'Error'
             MyButton.save = '='
 
+
 class TestApp(MDApp):
     def build(self):
-        bl = MDGridLayout(pos_hint={'centr_x': 3, 'center_y': 0.9}, cols=4, rows=5, padding=140, spacing=100)
-        df = MDBoxLayout(orientation='vertical', pos_hint={'centr_x': 3, 'center_y': 0.9}, padding=350, spacing=50)
-        self.jkl = MDLabel(text = '')
-        lab = [MyButton(text=str(x)) for x in range(10)]
-        qw = MyButton(text='+')
-        qw1 = MyButton(text='-')
-        qw2 = MyButton(text='*')
-        qw3 = MyButton(text='/')
-        qw4 = MyButton(text='=')
-        gh = MyButton(text = 'C')
-        gh1 = MyButton(text = '<=')
-        gh2 = MyButton(text = '.')
+        bl = MDGridLayout(
+            pos_hint={'center_x': 0.5, 'center_y': 0.5},
+            cols=4, rows=5, padding=150,
+            adaptive_size = True
+        )
+
+        df = MDBoxLayout(
+            orientation='vertical', pos_hint={'center_x': 0.5, 'center_y': 0.4},
+            adaptive_size = True
+        )
+        self.jkl = MDLabel(text='', halign = 'right', font_size = '50sp')
+        lab = [MyButton(text=str(x), halign = 'center', font_size = '50sp') for x in range(10)]
+        qw = MyButton(text='+', halign = 'center', font_size = '50sp')
+        qw1 = MyButton(text='-', halign = 'center', font_size = '50sp')
+        qw2 = MyButton(text='*', halign = 'center', font_size = '50sp')
+        qw3 = MyButton(text='/', halign = 'center', font_size = '50sp')
+        qw4 = MyButton(text='=', halign = 'center', font_size = '50sp')
+        gh = MyButton(text='C', halign = 'center', font_size = '50sp')
+        gh1 = MyButton(text='←', halign = 'center', font_size = '50sp')
+        gh2 = MyButton(text='.', halign = 'center', font_size = '50sp')
         df.add_widget(self.jkl)
         df.add_widget(bl)
         bl.add_widget(gh)
@@ -77,6 +86,7 @@ class TestApp(MDApp):
         bl.add_widget(lab[0])
         bl.add_widget(gh2)
         return df
+
 
 if __name__ == '__main__':
     app = TestApp()
