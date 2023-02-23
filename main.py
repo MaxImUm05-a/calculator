@@ -55,7 +55,7 @@ class TestApp(MDApp):
             orientation='vertical', pos_hint={'center_x': 0.5, 'center_y': 0.4},
             adaptive_size = True
         )
-        self.jkl = MDLabel(text='', halign = 'right', font_size = '50sp')
+        self.jkl = MDLabel(text='', halign = 'right', font_size = '50sp' , theme_text_color = 'Custom' ,  text_color = 'blue')
         lab = [MyButton(text=str(x), halign = 'center', font_size = '50sp') for x in range(10)]
         qw = MyButton(text='+', halign = 'center', font_size = '50sp')
         qw1 = MyButton(text='-', halign = 'center', font_size = '50sp')
