@@ -63,7 +63,7 @@ class TestApp(MDApp):
         qw3 = MyButton(text='/', halign = 'center', font_size = '50sp')
         qw4 = MyButton(text='=', halign = 'center', font_size = '50sp')
         gh = MyButton(text='C', halign = 'center', font_size = '50sp')
-        gh1 = MyButton(text='←', halign = 'center', font_size = '50sp')
+        gh1 = MyButton(text='<', halign = 'center', font_size = '50sp')
         gh2 = MyButton(text='.', halign = 'center', font_size = '50sp')
         df.add_widget(self.jkl)
         df.add_widget(bl)
