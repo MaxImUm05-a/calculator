@@ -47,7 +47,7 @@ class TestApp(MDApp):
     def build(self):
         bl = MDGridLayout(
             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-            cols=4, rows=5, padding=150,
+            cols=4, rows=5, padding=150,size_hint = (0.4 , 0.4),
             adaptive_size = True
         )
 
