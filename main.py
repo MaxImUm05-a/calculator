@@ -2,9 +2,9 @@ from kivymd.app import MDApp
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.label import MDLabel
 from kivymd.uix.gridlayout import MDGridLayout
-from kivymd.uix.button import MDRectangleFlatButton
+from kivymd.uix.button import MDFlatButton
 
-class MyButton(MDRectangleFlatButton):
+class MyButton(MDFlatButton):
     save = ''
 
     def __init__(self, text, *args, **kwargs):
@@ -47,7 +47,7 @@ class TestApp(MDApp):
     def build(self):
         bl = MDGridLayout(
             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-            cols=4, rows=5, padding=150,size_hint = (0.4 , 0.4),
+            cols=4, rows=5, padding=20,size_hint = (0.4 , 0.4),
             adaptive_size = True
         )
 
@@ -55,16 +55,18 @@ class TestApp(MDApp):
             orientation='vertical', pos_hint={'center_x': 0.5, 'center_y': 0.4},
             adaptive_size = True
         )
-        self.jkl = MDLabel(text='', halign = 'right', font_size = '50sp' , theme_text_color = 'Custom' ,  text_color = 'blue')
-        lab = [MyButton(text=str(x), halign = 'center', font_size = '50sp') for x in range(10)]
-        qw = MyButton(text='+', halign = 'center', font_size = '50sp')
-        qw1 = MyButton(text='-', halign = 'center', font_size = '50sp')
-        qw2 = MyButton(text='*', halign = 'center', font_size = '50sp')
-        qw3 = MyButton(text='/', halign = 'center', font_size = '50sp')
-        qw4 = MyButton(text='=', halign = 'center', font_size = '50sp')
-        gh = MyButton(text='C', halign = 'center', font_size = '50sp')
-        gh1 = MyButton(text='<', halign = 'center', font_size = '50sp')
-        gh2 = MyButton(text='.', halign = 'center', font_size = '50sp')
+        self.jkl = MDLabel(text='', halign = 'right', font_size = '60sp' , theme_text_color = 'Custom' ,  text_color = 'black' , text_size = (200, 100) )
+        lab = [MyButton(text=str(x), halign = 'center', font_size = '60sp' , md_bg_color =  (224/255,255/255,255/255)) for x in range(10)]
+        qw = MyButton(text='+', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        qw1 = MyButton(text='-', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        qw2 = MyButton(text='*', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        qw3 = MyButton(text='/', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        qw4 = MyButton(text='=', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        gh = MyButton(text='C', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        gh1 = MyButton(text='<', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        gh2 = MyButton(text='.', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
+        gh3 = MyButton(text='  ' , halign = 'center', font_size = '60sp' , md_bg_color =  (224/255,255/255,255/255))
+        gh4= MyButton(text=' ' , halign = 'center', font_size = '60sp' , md_bg_color =  (224/255,255/255,255/255))
         df.add_widget(self.jkl)
         df.add_widget(bl)
         bl.add_widget(gh)
@@ -84,6 +86,8 @@ class TestApp(MDApp):
         bl.add_widget(lab[9])
         bl.add_widget(qw4)
         bl.add_widget(lab[0])
+        bl.add_widget(gh3)
+        bl.add_widget(gh4)
         bl.add_widget(gh2)
         return df
 
