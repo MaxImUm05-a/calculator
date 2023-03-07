@@ -30,7 +30,7 @@ class MyButton(MDFlatButton):
             app.jkl.text = self.text
         elif self.text == 'C':
             app.jkl.text = ''
-        elif self.text == '<=':
+        elif self.text == '<':
             if txt == 'Error':
                 app.jkl.text = ''
             else:
@@ -42,20 +42,23 @@ class MyButton(MDFlatButton):
                 app.jkl.text = 'Error'
             MyButton.save = '='
 
+        app.jkl.texture_update()
+
 
 class TestApp(MDApp):
     def build(self):
         bl = MDGridLayout(
             pos_hint={'center_x': 0.5, 'center_y': 0.5},
-            cols=4, rows=5, padding=20,size_hint = (0.4 , 0.4),
+            cols=4, rows=5, padding=20, size_hint = (0.4 , 0.4),
             adaptive_size = True
         )
 
         df = MDBoxLayout(
             orientation='vertical', pos_hint={'center_x': 0.5, 'center_y': 0.4},
+            padding = 50, spacing = 20,
             adaptive_size = True
         )
-        self.jkl = MDLabel(text='', halign = 'right', theme_text_color = 'Custom' ,  text_color = 'black' )
+        self.jkl = MDLabel(text='', halign='right', valign='center', theme_text_color='Custom', text_color='black')
         lab = [MyButton(text=str(x), halign = 'center', font_size = '60sp' , md_bg_color =  (224/255,255/255,255/255)) for x in range(10)]
         qw = MyButton(text='+', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
         qw1 = MyButton(text='-', halign = 'center', font_size = '60sp' , text_color = 'grey' , md_bg_color =  (210/255,255/255,255/255))
